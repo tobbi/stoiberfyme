@@ -1,0 +1,1 @@
+{"license": "", "description": "Zeigt Webseiten so an, wie sie Edmund Stoiber aussprechen w\u00fcrde.", "contributors": [], "author": "tobbi", "url": "", "dependencies": ["api-utils", "addon-kit"], "version": "initial.rev96", "lib": "lib", "fullName": "Stoiberfy me", "main": "main", "id": "jid0-ZAEPExfZFY30nV7SWBrSfc03iuQ", "name": "stoiberfy-me"}
