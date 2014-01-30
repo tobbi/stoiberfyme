@@ -33,13 +33,18 @@ var mostFrequent = "die, der, und, in, zu, den, das, nicht, von, sie, ist, des, 
 
         for(var i = 0; i < mostFrequent.length; i++) {
             let random = Math.floor(Math.random() * values.length);
-            let randomBeforeAfter = Math.floor(Math.random() * 2);
+            let randomBeforeAfter = Math.floor(Math.random() * 3);
             let regex = new RegExp("\\b(" + mostFrequent[i] + ")\\b", "gi");
-            if(randomBeforeAfter) {
+            if(randomBeforeAfter == 0) {
                 v = v.replace(regex, "$1 " + values[random]);
             }
-            else {
+            else if(randomBeforeAfter == 1) {
                 v = v.replace(regex, values[random] + " $1");
+            }
+            else {
+                let regex = new RegExp("\\b(" + mostFrequent[i] + ")\\b\\s*(\\w+)", "gi");
+            	v = v.replace(regex, "$1 $2 " + values[random]);
+            	console.log(v);
             }
         }
         v = v.replace(" ist ", " ist im Grunde genommen ");
